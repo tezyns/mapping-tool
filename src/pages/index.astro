@@ -1,0 +1,17 @@
+---
+let toUrl = "https://tezyns.github.io";
+---
+
+<html lang="ko">
+	<head>
+		<meta charset="utf-8"/>
+		<title>tezyns-util</title>
+	</head>
+	<body>
+		<h1>Redirect to <a href={toUrl}>{toUrl}</a></h1>
+	</body>
+</html>
+
+<script define:vars={{toUrl}}>
+	window.location.replace(toUrl);
+</script>
