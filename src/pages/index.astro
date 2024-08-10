@@ -1,17 +1,16 @@
 ---
-let toUrl = "https://tezyns.github.io";
+import Base from "../layouts/Base.astro";
+import info from "../../package.json";
+import Grid from 'tui-grid';
 ---
 
-<html lang="ko">
-	<head>
-		<meta charset="utf-8"/>
-		<title>tezyns-util</title>
-	</head>
-	<body>
-		<h1>Redirect to <a href={toUrl}>{toUrl}</a></h1>
-	</body>
-</html>
+<Base>
+	<div class="position-relative h-full w-full flex flex-col">
+		<header class="flex-[0_0_16px] w-full text-center border-b">상품코드 Mapping Tool v{info.version}</header>
+		<section class="flex-[1_0_0]">
 
-<script define:vars={{toUrl}}>
-	window.location.replace(toUrl);
-</script>
+		</section>
+		<footer class="flex-[0_0_16px] w-full text-center border-t">Powered by Astro, UnoCSS</footer>
+	</div>
+</Base>
+
